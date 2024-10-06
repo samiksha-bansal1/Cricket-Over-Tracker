@@ -11,7 +11,7 @@ function addBallInCont(button) {
   if (wickets < 10 && ballCount < 6) {
     const ballCont = document.querySelector(".ballCont");
     const div = document.createElement("div");
-    div.innerHTML = button.innerHTML;
+    // div.innerHTML = button.innerHTML;
     ballCont.appendChild(div);
     ballCount++;
     if (button.innerHTML !== "Dot Ball") {
@@ -19,14 +19,17 @@ function addBallInCont(button) {
         const run = parseInt(button.innerHTML);
         score += run;
         currentOverScore += run;
+        div.innerHTML = button.innerHTML;
       } else {
+        div.innerHTML = "W";
         wickets++;
         if (wickets == 10) {
           endOver();
         }
       }
+    } else {
+      div.innerHTML = "D";
     }
-
     if (ballCount == 6) {
       newOver();
     }
@@ -38,7 +41,7 @@ function addExtraBallInCont(button) {
   if (wickets < 10) {
     const ballCont = document.querySelector(".ballCont");
     const div = document.createElement("div");
-    let type = button.innerHTML === "Wide Ball" ? "WB1" : "NB1";
+    let type = button.innerHTML === "Wide Ball" ? "WB" : "NB";
     score += 1;
     currentOverScore += 1;
     div.innerHTML = type;

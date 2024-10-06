@@ -21,7 +21,7 @@ body {
   background-color: white;
   padding-bottom: 80px;
   min-height: 50vh;
-  width: 50%;
+  width: 60%;
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -59,4 +59,83 @@ body {
   align-items: center;
   justify-content: center;
   margin-left: 10px;
+}
+@media (width<600px) {
+  .container {
+    min-height: 70vh;
+    width: 100%;
+    gap: 30px;
+    padding: 10px;
+  }
+  .buttonsCont {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+  }
+  .buttonsCont button {
+    width: 19vmin;
+    height: 14vmin;
+    margin-bottom: 5px;
+    font-size: 18px;
+    border-radius: 4px;
+  }
+  .ballCont {
+    display: flex;
+    height: 10%;
+    margin-top: 40px;
+    width: 100%;
+    gap: 10px;
+    overflow-x: scroll;
+    align-items: center;
+    justify-content: center;
+  }
+  .ballCont div {
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    font-size: 18px;
+    margin-left: 6px;
+  }
+}
+
+@media (width>600px) and (width<800px) {
+  .container {
+    min-height: 70vh;
+    width: 100%;
+    gap: 30px;
+    padding: 10px;
+  }
+  .buttonsCont {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+  }
+  .buttonsCont button {
+    width: 14vmin;
+    height: 8vmin;
+    margin-bottom: 5px;
+    font-size: 18px;
+    border-radius: 4px;
+  }
+  .ballCont {
+    display: flex;
+    height: 10%;
+    margin-top: 40px;
+    width: 100%;
+    gap: 10px;
+    overflow-x: scroll;
+    align-items: center;
+    justify-content: center;
+  }
+  .ballCont div {
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    font-size: 18px;
+    margin-left: 6px;
+  }
 }
